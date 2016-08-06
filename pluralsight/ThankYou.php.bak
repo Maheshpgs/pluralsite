@@ -65,7 +65,7 @@ if ($conn->query($sql) === TRUE) {
 	die();
 }
 
-$conn->close();
+//$conn->close();
 	//die("Registration COmpleted......");
 
 ?>
@@ -197,6 +197,11 @@ $conn->close();
 <li>7:45 pm – ‘Experience the Pluralsight Platform’ by Geetha Rao, Director, Pluralsight</li>
 <li>8:00 pm – Networking Dinner & Drinks</li>
 </ul>
+
+<h4 style="font-weight:600;">Date:<br /></h4>
+
+<h4 style="font-weight:200;"> Wednesday, 24'th August 2016</h4>
+<br>
 
 <h4 style="font-weight:600;">VENUE:<br /></h4>
 
