@@ -1,0 +1,10 @@
+/* CSS Document */
+@font-face {
+	font-family: 'gotham-light';
+	src: url('../fonts/gotham-light.eot');
+	src: local('☺'), url('../fonts/gotham-light.woff') format('woff'), url('../fonts/gotham-light.ttf') format('truetype'), url('../fonts/gotham-light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*{font-family: 'gotham-light' !important;}
