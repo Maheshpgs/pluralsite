@@ -35,18 +35,18 @@ $mail->DKIM_domain = '127.0.0.1';
 
 $mail->SMTPAuth = true;
 //Username to use for SMTP authentication
-$mail->Username = "events@palsglobalsolutions.com";
+$mail->Username = "events@palsglobalsolutions.in";
 
 //Password to use for SMTP authentication
 $mail->Password = "P@ls2016";
 //Set who the message is to be sent from
-$mail->setFrom('events@palsglobalsolutions.com', 'PluralSight Round Table');
+$mail->setFrom('events@palsglobalsolutions.in', 'PluralSight Round Table');
 //Set an alternative reply-to address
-$mail->addReplyTo('events@palsglobalsolutions.com', 'PluralSight Round Table');
+$mail->addReplyTo('events@palsglobalsolutions.in', 'PluralSight Round Table');
 
 //Set who the message is to be sent to
 $mail->addAddress($_POST['Email'], $_POST['FirstName']." ".$_POST['LastName']);
-$mail->addBCC('events@palsglobalsolutions.com', 'PluralSight Round Table');
+$mail->addBCC('events@palsglobalsolutions.in', 'PluralSight Round Table');
 $mail->addBCC('uday@palsglobalsolutions.com', 'PluralSight Round Table');
 $mail->addBCC('sriya@palsglobalsolutions.com', 'PluralSight Round Table');
 //Set the subject line
@@ -58,7 +58,7 @@ $mail->Subject = 'PluralSight - Join us for the Round Table Event';
 if(isset($_POST['FirstName'])) {
    $fname = $_POST['FirstName'];
 } else {
-    $fname = "MR/MRS Participant";
+    $fname = "Participant";
 }
 
 		$eventDate = "24th August 2016";
