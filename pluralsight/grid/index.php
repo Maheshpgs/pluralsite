@@ -129,7 +129,6 @@ m.ID
 , m.Country
 , m.How_Many_People_Do_You_Manage__c
 , m.user_status
-, m.user_registered
  from pluralsight m 
 order by m.ID desc
 ";
@@ -159,8 +158,6 @@ m.ID
 , m.Manufacturing
 , m.Country
 , m.How_Many_People_Do_You_Manage__c
-, m.user_status
-, m.user_registered
  from pluralsight m 
 where ID = :ID
 ";
