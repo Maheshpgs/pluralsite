@@ -47,12 +47,17 @@ echo "
 
 
 // enter your database host, name, username, and password
+/*
 $db_host = "ap-cdbr-azure-southeast-b.cloudapp.net";
 $db_user = "b9638ac1a1d625";
 $db_pass = "2d8b8a3a";
 $db_name = "acsm_70271d13b405930";
+*/
 
-
+$db_host="139.59.7.234";
+$db_user="timemgmt";
+$db_pass="P@ls2015";
+$db_name="events";
 
 
 // connect with pdo 
@@ -73,7 +78,7 @@ $lm->table = 'events';
 
 
 // identity / primary key for table
-$lm->identity_name = 'market_id';
+$lm->identity_name = 'ID';
 
 
 // optional, make friendly names for fields
@@ -99,21 +104,32 @@ $lm->grid_output_control['photo'] = '--image'; // image clickable
 $lm->grid_show_search_box = true;
 
 
+
 // optional, query for grid(). LAST COLUMN MUST BE THE IDENTITY for [edit] and [delete] links to appear
 $lm->grid_sql = "
-select 
-  m.ID
-, m.pro_fname
-, m.pro_lname
-, m.pro_email
-, m.pro_phone
-, m.pro_ans_field08
-, m.pro_organization
-, m.pro_ans_field10
-, m.user_status
-, m.display_name
+Select 
+m.ID
+, m.FirstName                                                             
+, m.LastName                                                              
+, m.Email                                                                 
+, m.Company                                                               
+, m.mobile                                                                
+, m.Job_Function__c                                                       
+, m.Animation                                                             
+, m.Art                                                                   
+, m.Business                                                              
+, m.Data                                                                  
+, m.Game                                                                  
+, m.IT                                                                    
+, m.Software                                                              
+, m.Web                                                                   
+, m.Learning                                                              
+, m.Architecture
+, m.Manufacturing
+, m.Country
+, m.How_Many_People_Do_You_Manage__c
 , m.user_registered
-from  events m 
+ from pluralsight m 
 order by m.ID desc
 ";
 $lm->grid_sql_param[':_search'] = '%' . trim(@$_REQUEST['_search']) . '%';
@@ -121,20 +137,30 @@ $lm->grid_sql_param[':_search'] = '%' . trim(@$_REQUEST['_search']) . '%';
 
 // optional, define what is displayed on edit form. identity id must be passed in also.  
 $lm->form_sql = "
-select 
-  m.ID
-, m.pro_fname
-, m.pro_lname
-, m.pro_email
-, m.pro_phone
-, m.pro_ans_field08
-, m.pro_organization
-, m.pro_ans_field10
-, m.user_status
-, m.display_name
+Select 
+m.ID
+, m.FirstName                                                             
+, m.LastName                                                              
+, m.Email                                                                 
+, m.Company                                                               
+, m.mobile                                                                
+, m.Job_Function__c                                                       
+, m.Animation                                                             
+, m.Art                                                                   
+, m.Business                                                              
+, m.Data                                                                  
+, m.Game                                                                  
+, m.IT                                                                    
+, m.Software                                                              
+, m.Web                                                                   
+, m.Learning                                                              
+, m.Architecture
+, m.Manufacturing
+, m.Country
+, m.How_Many_People_Do_You_Manage__c
 , m.user_registered
-from  events m
-where ID = :market_id
+ from pluralsight m 
+where ID = :ID
 ";
 $lm->form_sql_param[":$lm->identity_name"] = @$_REQUEST[$lm->identity_name]; 
 
