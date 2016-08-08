@@ -84,7 +84,7 @@ Thank you for registering!
 We will get back to you in 48Hrs to confirm your registration for the Round Table on Nimbler Delivery Capability with Smarter Learning on 24th August 2016. If you do not receive a confirmation mail, please email us at events@palsglobalsolutions.com. 
  <br>
  <br>
-You can also call +91-9515050829 for any queries / assistance regarding the same. We look forward to see you!
+You can also call +91-9515050829 for any queries / assistance regarding the same.
  <br>
  <br>
 Thank you and we look forward to see you!
