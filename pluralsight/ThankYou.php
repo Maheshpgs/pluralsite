@@ -26,85 +26,88 @@
 // Turn off error reporting
 error_reporting(0);
 
-//print_r($_REQUEST);
-//die;
-/*
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "events";
-*/
-/*
-$servername="fabs.cloudapp.net";
-$username="root";
-$password="P@1S2)l5#2O!2";
-$database="test_weatherdb";
-*/
-$servername="139.59.7.234";
-$username="timemgmt";
-$password="P@ls2015";
-$dbname="events";
+if(isset($_POST['Email']){
+		//print_r($_REQUEST);
+		//die;
+		/*
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		$dbname = "events";
+		*/
+		/*
+		$servername="fabs.cloudapp.net";
+		$username="root";
+		$password="P@1S2)l5#2O!2";
+		$database="test_weatherdb";
+		*/
+		$servername="139.59.7.234";
+		$username="timemgmt";
+		$password="P@ls2015";
+		$dbname="events";
 
-/*
-CREATE TABLE `pluralsight` (                                                              
-	`ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,                                  
-	FirstName varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	LastName varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	Email varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	Company varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	mobile varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	Job_Function__c varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	Animation varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	Art varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	Business varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	Data varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	Game varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	IT varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	Software varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	Web varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	Learning varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	Architecture varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	Manufacturing varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	Country varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	How_Many_People_Do_You_Manage__c varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-	`user_status` int(11) NOT NULL DEFAULT '0',                                        
-	`user_registered` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,                    
-	PRIMARY KEY (`ID`)                                                                 
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci  
+		/*
+		CREATE TABLE `pluralsight` (                                                              
+			`ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,                                  
+			FirstName varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			LastName varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			Email varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			Company varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			mobile varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			Job_Function__c varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			Animation varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			Art varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			Business varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			Data varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			Game varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			IT varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			Software varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			Web varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			Learning varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			Architecture varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			Manufacturing varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			Country varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			How_Many_People_Do_You_Manage__c varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+			`user_status` int(11) NOT NULL DEFAULT '0',                                        
+			`user_registered` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,                    
+			PRIMARY KEY (`ID`)                                                                 
+		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci  
 
-*/
+		*/
 
-// Database=acsm_70271d13b405930;Data Source=ap-cdbr-azure-southeast-b.cloudapp.net;User Id=b9638ac1a1d625;Password=2d8b8a3a
-/*
-$servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
-$username = "b9638ac1a1d625";
-$password = "2d8b8a3a";
-$dbname = "acsm_70271d13b405930";
-*/
+		// Database=acsm_70271d13b405930;Data Source=ap-cdbr-azure-southeast-b.cloudapp.net;User Id=b9638ac1a1d625;Password=2d8b8a3a
+		/*
+		$servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
+		$username = "b9638ac1a1d625";
+		$password = "2d8b8a3a";
+		$dbname = "acsm_70271d13b405930";
+		*/
 
-/*
-Server: palsevents.database.windows.net,1433 \r\nSQL Database: events\r\nUser Name: palsevents\r\n\r\nPHP Data Objects(PDO) Sample Code:\r\n\r\ntry {\r\n   $conn = new PDO ( \"sqlsrv:server = tcp:palsevents.database.windows.net,1433; Database = events\", \"palsevents\", \"{your_password_here}\");\r\n    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );\r\n}\r\ncatch ( PDOException $e ) {\r\n   print( \"Error connecting to SQL Server.\" );\r\n   die(print_r($e));\r\n}\r\n\rSQL Server Extension Sample Code:\r\n\r\n$connectionInfo = array(\"UID\" => \"palsevents@palsevents\", \"pwd\" => \"{your_password_here}\", \"Database\" => \"events\", \"LoginTimeout\" => 30, \"Encrypt\" => 1);\r\n$serverName = \"tcp:palsevents.database.windows.net,1433\";\r\n$conn = sqlsrv_connect($serverName, $connectionInfo);
-*/
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+		/*
+		Server: palsevents.database.windows.net,1433 \r\nSQL Database: events\r\nUser Name: palsevents\r\n\r\nPHP Data Objects(PDO) Sample Code:\r\n\r\ntry {\r\n   $conn = new PDO ( \"sqlsrv:server = tcp:palsevents.database.windows.net,1433; Database = events\", \"palsevents\", \"{your_password_here}\");\r\n    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );\r\n}\r\ncatch ( PDOException $e ) {\r\n   print( \"Error connecting to SQL Server.\" );\r\n   die(print_r($e));\r\n}\r\n\rSQL Server Extension Sample Code:\r\n\r\n$connectionInfo = array(\"UID\" => \"palsevents@palsevents\", \"pwd\" => \"{your_password_here}\", \"Database\" => \"events\", \"LoginTimeout\" => 30, \"Encrypt\" => 1);\r\n$serverName = \"tcp:palsevents.database.windows.net,1433\";\r\n$conn = sqlsrv_connect($serverName, $connectionInfo);
+		*/
+		// Create connection
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		// Check connection
+		if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		} 
 
-//$sql = "INSERT INTO events (pro_fname, pro_lname, pro_email,pro_phone,pro_ans_field08,pro_organization,pro_ans_field10) VALUES ('".mysql_real_escape_string($_POST['pro_fname'])."', '".mysql_real_escape_string($_POST['pro_lname'])."', '".mysql_real_escape_string($_POST['pro_email'])."','".mysql_real_escape_string($_POST['pro_phone'])."','".mysql_real_escape_string($_POST['pro_ans_field08'])."','".mysql_real_escape_string($_POST['pro_organization'])."','".mysql_real_escape_string($_POST['pro_ans_field10'])."')";
+		//$sql = "INSERT INTO events (pro_fname, pro_lname, pro_email,pro_phone,pro_ans_field08,pro_organization,pro_ans_field10) VALUES ('".mysql_real_escape_string($_POST['pro_fname'])."', '".mysql_real_escape_string($_POST['pro_lname'])."', '".mysql_real_escape_string($_POST['pro_email'])."','".mysql_real_escape_string($_POST['pro_phone'])."','".mysql_real_escape_string($_POST['pro_ans_field08'])."','".mysql_real_escape_string($_POST['pro_organization'])."','".mysql_real_escape_string($_POST['pro_ans_field10'])."')";
 
 
-$sql = "INSERT INTO pluralsight (FirstName,LastName,Email,Company,mobile,Job_Function__c,Animation,Art,Business,Data,Game,IT,Software,Web,Learning,Architecture,Manufacturing,Country,How_Many_People_Do_You_Manage__c)
-VALUES ('".$_POST[FirstName]."','".$_POST[LastName]."','".$_POST[Email]."','".$_POST[Company]."','".$_POST[mobile]."','".$_POST[Job_Function__c]."','".$_POST[Animation]."','".$_POST[Art]."','".$_POST[Business]."','".$_POST[Data]."','".$_POST[Game]."','".$_POST[IT]."','".$_POST[Software]."','".$_POST[Web]."','".$_POST[Learning]."','".$_POST[Architecture]."','".$_POST[Manufacturing]."','".$_POST[Country]."','".$_POST[How_Many_People_Do_You_Manage__c]."')";
+		$sql = "INSERT INTO pluralsight (FirstName,LastName,Email,Company,mobile,Job_Function__c,Animation,Art,Business,Data,Game,IT,Software,Web,Learning,Architecture,Manufacturing,Country,How_Many_People_Do_You_Manage__c)
+		VALUES ('".$_POST[FirstName]."','".$_POST[LastName]."','".$_POST[Email]."','".$_POST[Company]."','".$_POST[mobile]."','".$_POST[Job_Function__c]."','".$_POST[Animation]."','".$_POST[Art]."','".$_POST[Business]."','".$_POST[Data]."','".$_POST[Game]."','".$_POST[IT]."','".$_POST[Software]."','".$_POST[Web]."','".$_POST[Learning]."','".$_POST[Architecture]."','".$_POST[Manufacturing]."','".$_POST[Country]."','".$_POST[How_Many_People_Do_You_Manage__c]."')";
 
-if ($conn->query($sql) === TRUE) {
-    //echo "New record created successfullyMessage sent!";
-	include("examples/smtp.php");
-//	die();
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-	die();
+		if ($conn->query($sql) === TRUE) {
+			//echo "New record created successfullyMessage sent!";
+			include("examples/smtp.php");
+		//	die();
+		} else {
+			echo "Error: " . $sql . "<br>" . $conn->error;
+			die();
+		}
+
 }
 
 //$conn->close();

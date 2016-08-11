@@ -191,7 +191,7 @@ if ($conn->query($sql) === TRUE) {
 </div>
 
 <div class="text-component" >
-<h4 style="font-weight:600;"  class=" title--center ">
+<h4 style="font-weight:600;"  class=" title--center "> <br>
 Thank you for registering! 
 </h4>
     <p style="font-size: 17.0px; font-weight:600;line-height: 1.75em;"  class=" title--center ">We will confirm your participation within 48 Hrs.</p>
