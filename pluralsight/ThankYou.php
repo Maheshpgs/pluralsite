@@ -26,7 +26,7 @@
 // Turn off error reporting
 error_reporting(0);
 
-if(isset($_POST['Email']){
+//if(isset($_POST['Email']){
 		//print_r($_REQUEST);
 		//die;
 		/*
@@ -108,7 +108,7 @@ if(isset($_POST['Email']){
 			die();
 		}
 
-}
+//}
 
 //$conn->close();
 	//die("Registration COmpleted......");
